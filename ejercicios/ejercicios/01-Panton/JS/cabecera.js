@@ -109,19 +109,20 @@ loadImages
   }, "-=0.20")
   .to(split.lines, {
     yPercent: 16,
+    x:'6px',
     stagger: 0.01,
     duration: 0.8,
     ease: 'sine.inOut'
   }, 'start')
   .to(menuLine1, {
-    width: '64px',
+    width: '40px',
     autoAlpha: 1,
     stagger: 0.01,
     duration: 0.8,
     ease: 'power1.inOut'
   }, 'start')
   .to(menuLine2, {
-    width: '56px',
+    width: '44px',
     autoAlpha: 1,
     stagger: 0.01,
     duration: 1,
