@@ -28,6 +28,12 @@
     text-rendering: optimizeLegibility;
 }
 
+@font-face {
+    font-family: 'Geist';
+    font-weight: thin;
+    src: url('./Geist-UltraLight.woff') format('woff2');
+    text-rendering: optimizeLegibility;
+}
 
 :root {
 	--black: #333;

@@ -15,20 +15,11 @@ html {
 	z-index: 10;
 	width: 0;
 	height: 0;
-	top: 0;
-	left: 0;
+	top: -4px;
+	left: -2px;
   }
   
-  .cursor p {
-	position: absolute;
-	z-index: 1;
-	transform: translate(-50%, -50%);
-	font-family: 'Sud';
-	font-size: 40px;
-	color: var(--white);
-	text-align: center;
-	white-space: nowrap;
-  }
+
 
   
   .cursor,
@@ -47,7 +38,11 @@ html {
   
   .circle.circle-01 {
 	transform: translate(-50%, -50%) scale(0.1);
-	background-color: #e71d36;
+	background: rgba(255, 255, 255, 0.2);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   
@@ -58,7 +53,7 @@ html {
 	display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 2.2% 0;
+    padding: 20px 2.4% 0;
 
 	p {
 		font-family: 'Geist';
@@ -161,21 +156,103 @@ header {
 	}
 }
 
-.wrapper {
+.wrapper.home{
 	padding: 0 4%;
 	.texto-incial {
 		padding: 32px 0 48px;
 		h2 {
 			font-weight: 100;
 			font-size: 18px;
+			font-family: 'Geist';
 		}
 		p {
 			font-family: 'Geist';
-			font-weight: bold;
+			font-weight: 800;
 			letter-spacing: 1px;
 			font-size: 48px;
-			font-weight: 800;
+			
+		}
+	}
+
+	.productos {
+		display: flex;
+        flex-flow: wrap;
+        gap: 12px;
+        justify-content: center;
+		div {
+			width: 208px;
+			img {
+
+			}
 		}
 	}
 }
 
+.double-imgs {
+	display: flex;
+    flex-flow: wrap;
+    gap: 48px;
+    /* justify-content: space-evenly; */
+    padding: 240px 40px 200px;
+
+	.side-menu {
+		position: relative;
+		margin: -32px 0 0;
+		h3 {
+			position: absolute;
+			top: -60px;
+			width: 100%;
+			white-space: nowrap;
+			font-family: 'Gerald';
+			font-size:40px;
+			z-index: 9;
+		}
+		ul {
+			padding: 24px 0 0 16px;
+			li {
+				padding: 6px 0 6px;
+				font-family: 'Geist';
+				font-weight: 400;
+				font-size: 24px;
+				cursor: pointer;
+			}
+		} 
+
+		.line-wrap {
+			position: relative;
+
+			.line {
+				width: 0%;
+				min-width: auto;
+				height: 2px;
+				background-color: #e71d36;
+				position: absolute;
+				bottom: 6px;
+				transition: width 0.5s ease; 
+			}
+		}
+	}
+
+
+	div{
+		max-width: 380px;
+		min-width: 300px;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+
+		img {
+			aspect-ratio: 7 / 10;
+    		object-fit: cover;
+		}
+	} 
+
+	h4 {
+		font-family: 'Geist';
+		font-weight: 100;
+		font-size: 24px;
+		padding: 8px;
+	}
+}
+
+.double-imgs .side-menu .line-wrap:hover .line {
+    width: 100%;
+}
